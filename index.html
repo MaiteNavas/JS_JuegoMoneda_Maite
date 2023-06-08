@@ -8,8 +8,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Bienvenidos al juego de la Moneda</h1>
-
+    <header>
+        <h1>Bienvenidos al juego de la Moneda</h1>
+    </header>
+    <main>
+        <div class ="main-counter">
+            <div class="counter" id="counterHead">
+                <h2>CONTADOR CARA</h2>
+                <h2 id="printHead"></h2>
+            </div>
+            <div class="counter" id ="counterTail">
+                <h2>CONTADOR CRUZ</h2>
+                <h2 id="printTail"></h2>
+            </div>
+        </div>
+        <div class="main-game">
+            <div class="buttons">
+                <button id="spinCoin" onclick="animationCoin();randomNumber()">GIRAR LA MONEDA</button>
+                <button id="resetCoin" onclick="resetGame()">REINICIAR</button>
+            </div>
+            <div class="coins">
+                <svg id="coins-div" width="270" height="276" viewBox="0 0 270 276" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="flip-coin-img" id="head-coin" d="M269.5 138C269.5 213.95 209.272 275.5 135 275.5C60.728 275.5 0.5 213.95 0.5 138C0.5 62.0504 60.728 0.5 135 0.5C209.272 0.5 269.5 62.0504 269.5 138Z" fill= "blue" stroke="black"/>
+                    <path class="flip-coin-img" id="tail-coin" d="M269.5 138C269.5 213.95 209.272 275.5 135 275.5C60.728 275.5 0.5 213.95 0.5 138C0.5 62.0504 60.728 0.5 135 0.5C209.272 0.5 269.5 62.0504 269.5 138Z" fill= "lightblue" stroke="black"/>
+                </svg>
+            </div>  
+        </div>
+    </main>
     <script src="main.js"></script>
 </body>
 </html>
