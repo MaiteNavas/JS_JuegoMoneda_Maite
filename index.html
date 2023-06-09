@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juego de la moneda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,700;1,800&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,27 +16,27 @@
         <h1>Bienvenidos al juego de la Moneda</h1>
     </header>
     <main>
-        <div class ="main-counter">
-            <div class="counter" id="counterHead">
+        <div class ="counter">
+            <div class="counter-head" id="counter-head">
                 <h2>CONTADOR CARA</h2>
                 <h2 id="printHead"></h2>
             </div>
-            <div class="counter" id ="counterTail">
+            <div class="counterTail" id ="counterTail">
                 <h2>CONTADOR CRUZ</h2>
                 <h2 id="printTail"></h2>
             </div>
         </div>
-        <div class="main-game">
-            <div class="buttons">
-                <button id="spinCoin" onclick="animationCoin();randomNumber()">GIRAR LA MONEDA</button>
-                <button id="resetCoin" onclick="resetGame()">REINICIAR</button>
+        <div class="coins" id="coins-div">
+            <div class="flip-coin-img" id="head-coin">
+                <img src="./img/headCoin.png"/>
             </div>
-            <div class="coins">
-                <svg id="coins-div" width="270" height="276" viewBox="0 0 270 276" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path class="flip-coin-img" id="head-coin" d="M269.5 138C269.5 213.95 209.272 275.5 135 275.5C60.728 275.5 0.5 213.95 0.5 138C0.5 62.0504 60.728 0.5 135 0.5C209.272 0.5 269.5 62.0504 269.5 138Z" fill= "blue" stroke="black"/>
-                    <path class="flip-coin-img" id="tail-coin" d="M269.5 138C269.5 213.95 209.272 275.5 135 275.5C60.728 275.5 0.5 213.95 0.5 138C0.5 62.0504 60.728 0.5 135 0.5C209.272 0.5 269.5 62.0504 269.5 138Z" fill= "lightblue" stroke="black"/>
-                </svg>
-            </div>  
+            <div class="flip-coin-img" id="tail-coin">
+                <img src="./img/tailCoin.png"/>
+            </div>
+        </div>
+        <div class="buttons">
+                <button id="spinCoin" onclick="randomNumber(); animationCoin()">GIRAR LA MONEDA</button>
+                <button id="resetCoin" onclick="resetGame()">REINICIAR</button>
         </div>
     </main>
     <script src="main.js"></script>
