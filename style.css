@@ -10,43 +10,45 @@ body {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
 }
-
-h2 {
-    color:brown;
-    border-color: black;
-    text-align: center;
+header{
+    margin: 5%;
 }
+
 
 main {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 h1 {
     text-align: center;
 }
 
-.main-counter{
+.counter{
     width: 50%;
     display:flex;
     flex-flow: row nowrap;
     justify-content: space-evenly;
 }
-
-.counter {
+.counter-div {
     display: flex;
-    flex-flow:column nowrap;
-    justify-content: top;
-    align-items: center;
-    padding: 1rem;;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+}
+
+h2 {
+    color:rgb(203, 82, 12);
+    border-color: black;
+    text-align: center;
+    padding: 10px;
 }
 
 .coins {
-    width: 100%;
-    border: 1px solid black;
-    position: relative;
+    width: 150px;
+    height: 150px;
+    position:relative;
     margin: 50px auto;
     -webkit-transform-style: preserve-3d;
             transform-style: preserve-3d;
@@ -56,52 +58,35 @@ h1 {
 
 #head-coin, #tail-coin {
     position: absolute;
-    margin-top: 20%;
-    margin-left: 5%;
+    width: 100%;
+    height: 100%;
     -webkit-backface-visibility: hidden;
             backface-visibility: hidden;
-    transform-origin: 50% 50%;
-    visibility: visible;
+}
+img {
+    width: 150px;
 }
 
 #tail-coin{
     transform: rotateY(180deg);
 }
-.flip-coin-head{
-    animation-name: flip-coin-head;
-    animation-duration: 4s;
-    animation-timing-function: ease-out;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    transform-origin: 50% 50%;
-}
 
 @keyframes flip-coin-head{
     0%{
-        transform: translateX(0) translateY(0) rotateY(0deg);
+        transform:rotateY(0deg);
     }
     100%{
-        transform: translateX(0) translateY(0) rotateY(2700deg);
+        transform:rotateY(2700deg);
     }  
-}
-.flip-coin-tail{
-    animation-name: flip-coin-tail;
-    animation-duration: 4s;
-    animation-timing-function: ease-out;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    transform-origin: 50% 50%;
 }
 
 @keyframes flip-coin-tail{
     0%{
-        transform: translateX(0) translateY(0) rotateY(0deg);
+        transform: rotateY(0deg);
     }
     100%{
-        transform:translateX(0) translateY(0) rotateY(2520deg);
+        transform: rotateY(2520deg);
     }  
 }
  
-
-
 
